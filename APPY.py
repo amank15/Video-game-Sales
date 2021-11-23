@@ -46,8 +46,9 @@ X = dataset.iloc[:, :].values
 X = np.delete(X, 6, 1)
 y = dataset.iloc[:, 6:7].values
 # Splitting the dataset into Train and Test sets
+import numpy as np
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size = 0.3, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 0)
 # Saving name of the games in training and test set
 games_in_training_set = X_train[:, 0]
 games_in_test_set = X_test[:, 0]
